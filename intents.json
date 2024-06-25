@@ -55,6 +55,7 @@
       {
         "tag": "informal_question",
         "patterns": [
+          "How about you?",
           "What's up?",
           "How's your day?",
           "What's new?",
@@ -64,7 +65,8 @@
         "responses": [
           "Not much, just here to chat with you.",
           "My day is going well. How about yours?",
-          "Nothing much is new. What about you?"
+          "Nothing much is new. What about you?",
+          "My day is great! Thank you for asking!"
         ]
       },
 
@@ -106,6 +108,26 @@
       },
 
       {
+        "tag": "Gratitude",
+        "patterns": [
+          "Thanks",
+          "Thank you",
+          "Thank you so much",
+          "I apreciate it",
+          "You are very helpful",
+          "You're the best",
+          "I love you",
+          "You're awesome"
+        ],
+        "responses": [
+          "Anytime friend!",
+          "No problem!",
+          "I'm always here to help!",
+          "You are most welcome!"
+        ]
+      },
+
+      {
         "tag": "math",
         "patterns": [
             "Solve this math problem",
@@ -127,6 +149,100 @@
           "What is the weather forecast"
         ],
         "responses": ["Let me see"]
+      },
+
+      {
+        "tag": "jokes",
+        "patterns": [
+          "Tell me a joke",
+          "Tell me something funny",
+          "Tell me a funny joke",
+          "What is a funny joke?",
+          "Can you make me laugh?",
+          "Can you tell me a joke?"
+        ],
+        "responses": [
+          "What did the bartender say to the jumper cables? You better not try to start anything.",
+          "Don't you hate jokes about German sausage? They're the wurst!"
+          ,"Two artists had an art contest... It ended in a draw"
+          ,"Why did the chicken cross the playground? To get to the other slide."
+          ,"What gun do you use to hunt a moose? A moosecut!"
+          ,"If life gives you melons, you might have dyslexia."
+          ,"Broken pencils... ...are pointless."
+          ,"What did one snowman say to the other snowman? 'Do you smell carrots?'"
+          ,"How many hipsters does it take to change a lightbulb? It's a really obscure number. You've probably never heard of it."
+          ,"Where do sick boats go? The dock!"
+          ,"I like my slaves like I like my coffee: Free."
+          ,"My girlfriend told me she was leaving me because I keep pretending to be a Transformer... I said, No, wait! I can change!"
+          ,"Old Chinese proverb: Man who not shower in 7 days makes one reek."
+          ,"What form of radiation bakes you cookies? A gramma ray"
+          ,"Bee jokes, courtesy of my niece (age 8). What did the bee use to dry off after swimming? A *bee*ch towel. What did the bee use to get out the tangles? A honeycomb."
+          ,"What's the loudest economic system? CAPITALISM"
+          ,"I went for a job interview today... The interviewer said to me, What would you say your greatest weakness is? I said, I think Id have to say my listening skills are my greatest strength."
+          ,"Who was the knight that invented the round table? Sir Cumference. (via friend who got this from a street performance group in the England area of Epcot)"
+          ,"What did the German air force eat for breakfast during WW2? Luftwaffles"
+          ,"I the shell off a snail yesterday... you'd think it would move faster, but it was really kinda sluggish."
+          ,"What's worse than a centipede with sore feet? A giraffe with a sore throat"
+          ,"What's red and bad for your teeth? A brick."
+          ,"Why did the Chicken cross the playground? To get to the other slide"
+          ,"Did you hear about the French chef who committed suicide? He lost the huile d'olive"
+          ,"Wanna hear a joke about unemployed people? Nevermind, they don't work."
+          ,"Knock Knock Who's there Boo!! Boo who? Don't cry, it's only a joke"
+          ,"How much did the skeleton charge for his excellent legal services? An arm and a leg."
+          ,"Why do gorillas have such big nostrils? Cos they got big fingers."
+          ,"What is the difference between a Siberian husky and an Alaskan husky? About 1500 miles."
+          ,"What do vegan zombies eat? GRAAAIIINSSS!"
+          ,"What's the difference between a Thai man and a Thai woman? Pls help."
+          ,"What do you call a car that eats other cars? A carnivore."
+          ,"Why did the golfer wear two pairs of pants In case he gets a hole in one"
+          ,"An Olympic gymnast walked into a bar... She didnt get a medal..."
+          ,"What does a mexican magician make for breakfast? Toast-tah-dahs!"
+          ,"Why don't Bond villains feel cold in the winter? Because they dress in lairs."
+          ,"What was Carl Sagan's favorite drink? Cosmos."
+          ,"Knock knock... Who's there? I did up. I did up-who?"
+          ,"I like my jokes they way I like my robots. Killer."
+          ,"What type of school did Sherlock Holmes go to? Elementary :)"
+          ,"My friend told an out of place joke about police searches. But I don't think it was warranted."
+          ,"Why did the vampire use mouthwash? Because he had bat breath"
+          ,"What did the corn say when it was complemented? Aww, shucks!"
+          ,"Why did the Fall break off from all the other seasons? Because it wanted autumnomy"
+        ]
+      },
+
+      {
+        "tag": "stocks"
+      },
+
+      {
+        "tag": "quotes"
+      },
+
+      {
+        "tag": "fitness"
+      },
+
+      {
+        "tag": "health"
+      },
+
+      {
+        "tag": "games"
+      },
+
+      {
+        "tag": "dictionary"
+      },
+
+      {
+        "tag": "calender"
+      },
+
+      {
+        "tag": "movies"
+      },
+
+      {
+        "tag": "music"
       }
     ]
   }
