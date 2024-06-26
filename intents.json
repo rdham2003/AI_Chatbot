@@ -210,39 +210,42 @@
       },
 
       {
-        "tag": "stocks"
+        "tag": "music",
+        "patterns": [
+          "What's a good song?",
+          "Song recommendations",
+          "Recommend me a song",
+          "What should I listen to?",
+          "What music should I listen to?",
+          "Can you put me on a song?"
+        ],
+        "responses": ["I gotchu"]
       },
 
       {
-        "tag": "quotes"
+        "tag": "stocks_price",
+        "patterns": [
+          "What is the current price of stock?",
+          "Stock price of?",
+          "What is the stock price? of",
+          "How much is a stock share of?",
+          "How much is a share of worth?",
+          "What is today's price of?"
+        ],
+        "responses": ["Let me check"]
       },
 
       {
-        "tag": "fitness"
-      },
-
-      {
-        "tag": "health"
-      },
-
-      {
-        "tag": "games"
-      },
-
-      {
-        "tag": "dictionary"
-      },
-
-      {
-        "tag": "calender"
-      },
-
-      {
-        "tag": "movies"
-      },
-
-      {
-        "tag": "music"
+        "tag": "stocks_trend",
+        "patterns": [
+          "What is the recent trend of stock?",
+          "Stock trend of?",
+          "What is the stock trend of?",
+          "How much has the stock share of changed?",
+          "How much has the stock share of altered?",
+          "What is the trend of the stock look like?"
+        ],
+        "responses": ["Let me check"]
       }
     ]
   }

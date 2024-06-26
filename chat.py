@@ -5,13 +5,22 @@ from NeuralNetwork import Model
 import re
 from nplPipeline import bag_of_words, tokenize
 import requests
+import webbrowser
 
 weatherAPI = '3f465ec287cfeb5fa02a21445f57f65b'
+stockAPI = '477c206ae68c40dda2f70e9d696193ba'
+interval = '1day'
 bot_name = "Neuro"
 convo = True
+musicLinks = ["https://www.youtube.com/watch?v=gpnQhbOMQDA", "https://youtu.be/h35g2e9aIIk", "https://youtu.be/Eyt40gCbYeU"]
 
 def get_weather(city):
     url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={weatherAPI}'
+    response = requests.get(url)
+    return response.json()
+
+def get_stocks(symbol):
+    url = f'https://api.twelvedata.com/time_series?symbol={symbol}&interval={interval}&apikey={stockAPI}'
     response = requests.get(url)
     return response.json()
 
@@ -32,7 +41,7 @@ def get_response(sentence):
     probability = probs[0][predicted.item()]
     # print(probability.item())
     
-    if probability.item() > 0.75:
+    if probability.item() > 0.95:
       for intent in intents["intents"]:
         if tag == intent["tag"]:
             response = f'{random.choice(intent["responses"])}'
@@ -58,6 +67,30 @@ def get_response(sentence):
                             return f'The current temperature in {city} is {round((get_weather(city)["main"]["temp"]-273.15) * (9/5) + 32)}°F with {get_weather(city)["weather"][0]["description"]}.'
                     if not cityFound:
                         return "Could no locate city."
+            if tag == 'music':
+                randomSong = random.randint(0,len(musicLinks)-1)
+                webbrowser.open(musicLinks[randomSong])
+                return "Just Listen"
+            if tag == 'stocks_price':
+                with open('nasdaq_tickers.txt', 'r') as f:
+                    stockLst = f.readlines()
+                    stockFound = False
+                    for stock in stockLst:
+                        stock = stock[:-1]
+                        if stock in text:
+                            return f'Stock Name: {stock}. Stock Current Price: ${float(get_stocks(stock)["values"][0]["open"]):.2f} Stock Low Price: ${float(get_stocks(stock)["values"][0]["low"]):.2f} Stock High Price: ${float(get_stocks(stock)["values"][0]["high"]):.2f}'
+                    if not stockFound:
+                        return f'Could not find stock'
+            if tag == 'stocks_trend':
+                with open('nasdaq_tickers.txt', 'r') as f:
+                    stockLst = f.readlines()
+                    stockFound = False
+                    for stock in stockLst:
+                        stock = stock[:-1]
+                        if stock in text:
+                            return f'Stock Name: {stock}. Stock Current Price: ${float(get_stocks(stock)["values"][0]["open"]):.2f} Stock Low Price: ${float(get_stocks(stock)["values"][0]["low"]):.2f} Stock High Price: ${float(get_stocks(stock)["values"][0]["high"]):.2f}'
+                    if not stockFound:
+                        return f'Could not find stock trend'
             if tag == 'farewell':
                 global convo
                 convo = False
