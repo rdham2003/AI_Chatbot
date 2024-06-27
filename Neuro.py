@@ -1,9 +1,9 @@
 import random
 import json
 import torch
-from NeuralNetwork import Model
+from modelTraining.NeuralNetwork import Model
 import re
-from nplPipeline import bag_of_words, tokenize
+from modelTraining.nplPipeline import bag_of_words, tokenize
 import requests
 import webbrowser
 import datetime
@@ -35,7 +35,7 @@ def get_def(word):
     return worddict[0]['meanings'][0]['definitions'][0]['definition']
 
 def get_random_quote():
-    with open('quotes.csv', 'r') as f:
+    with open('dataFiles/quotes.csv', 'r') as f:
         lines = f.readlines()
         f.close()
     newlines = []
@@ -65,7 +65,7 @@ def get_response(sentence):
     #     tag_predictions.append((tags[i], prob.item()))
     # print(tag_predictions)
     probability = probs[0][predicted.item()]
-    print(probability.item())
+    # print(probability.item())
     
     if probability.item() > 0.85:
       for intent in intents["intents"]:
@@ -82,7 +82,7 @@ def get_response(sentence):
                 else:
                     return "Please provide a valid math expression."
             if tag == 'weather':
-                with open('list.txt', 'r') as f:
+                with open('dataFiles/list.txt', 'r') as f:
                     cityLst = f.readlines()
                     cityFound = False
                     for city in cityLst:
@@ -98,7 +98,7 @@ def get_response(sentence):
                 webbrowser.open(musicLinks[randomSong])
                 return "Just Listen"
             if tag == 'stocks_price':
-                with open('nasdaq_tickers.txt', 'r') as f:
+                with open('dataFiles/nasdaq_tickers.txt', 'r') as f:
                     stockLst = f.readlines()
                     stockFound = False
                     for stock in stockLst:
@@ -108,7 +108,7 @@ def get_response(sentence):
                     if not stockFound:
                         return f'Could not find stock'
             if tag == 'stocks_trend':
-                with open('nasdaq_tickers.txt', 'r') as f:
+                with open('dataFiles/nasdaq_tickers.txt', 'r') as f:
                     stockLst = f.readlines()
                     stockFound = False
                     for stock in stockLst:
@@ -118,7 +118,7 @@ def get_response(sentence):
                     if not stockFound:
                         return f'Could not find stock trend'
             if tag == 'dictionary':
-                with open('words.txt', 'r') as f:
+                with open('dataFiles/words.txt', 'r') as f:
                     wordLst = f.readlines()
                     wordFound = False
                     for word in wordLst:
@@ -128,7 +128,7 @@ def get_response(sentence):
                     if not wordFound:
                         return f'Could not find word'
             if tag == 'time':
-                with open('list.txt', 'r') as f:
+                with open('dataFiles/list.txt', 'r') as f:
                     cityLst = f.readlines()
                     cityFound = False
                     for city in cityLst:
@@ -141,6 +141,29 @@ def get_response(sentence):
                         return "Please provide a city."
             if tag == 'quote':
                 return get_random_quote()
+            if tag == 'games':
+                game = input("Neuro: Sure, would you like to play Rock Paper Scissors? ")
+                if game == "Yes" or game == "yes" or game == "Y" or game == "y":
+                    neuroScore = 0
+                    userScore = 0
+                    while True:
+                        userInput = input("Neuro: Rock Paper Scissors... (type quit to exit) ")
+                        if userInput == 'quit':
+                            break
+                        if (userInput != "Rock") and (userInput != "Paper") and (userInput != "Scissors"):
+                            print("Neuro: Please input a valid choice")
+                            continue
+                        neuroChoicelst = ["Rock", "Paper", "Scissors"]
+                        neuroChoice = random.randint(0,2)
+                        if (neuroChoice == 0 and userInput == "Paper") or (neuroChoice == 1 and userInput == "Scissors") or (neuroChoice == 2 and userInput == "Rock"):
+                            userScore += 1
+                            print(f'Neuro: I chose {neuroChoicelst[neuroChoice]},so you win! Neuro Score: {neuroScore}. Your Score: {userScore}')
+                        elif (neuroChoice == 1 and userInput == "Paper") or (neuroChoice == 2 and userInput == "Scissors") or (neuroChoice == 0 and userInput == "Rock"):
+                            print(f'Neuro: We both chose {userInput}. It\'s a draw!')
+                        else:
+                            neuroScore += 1
+                            print(f'Neuro: I chose {neuroChoicelst[neuroChoice]}, so I win! Neuro Score: {neuroScore}. Your Score: {userScore}') 
+                    return f"Good game! Final Score: Neuro: {neuroScore}. Your score: {userScore}"                          
             if tag == 'farewell':
                 global convo
                 convo = False
@@ -150,7 +173,7 @@ def get_response(sentence):
     else:
         return f'Sorry, I do not understand...'
 
-with open("intents.json", 'r') as tData:
+with open("modelTraining/intents.json", 'r') as tData:
     intents = json.load(tData)
     
 data = torch.load("model.pth")

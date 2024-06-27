@@ -10,7 +10,7 @@ import os
 os.system('cls')
 
 #Loading Data
-with open("intents.json", 'r') as tData:
+with open("modelTraining/intents.json", 'r') as tData:
     intents = json.load(tData)
     
 # Data preprocessing

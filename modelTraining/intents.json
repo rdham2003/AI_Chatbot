@@ -465,6 +465,34 @@
               "Give me a motivational quote"
           ],
           "responses": ["I will help."]
+      },
+
+      {
+        "tag": "games",
+        "patterns": [
+            "I'm bored",
+            "I want to play a game",
+            "Can we play a game",
+            "Let's play a game",
+            "Do you have any games?",
+            "Suggest a game to play",
+            "Can you entertain me?",
+            "Let's have some fun",
+            "Play a game with me",
+            "What games can we play?",
+            "Any game suggestions?",
+            "Can we start a game?",
+            "I need some entertainment",
+            "Can we do something fun?",
+            "I'd like to play a game",
+            "What games do you have?",
+            "Game time!",
+            "Play with me",
+            "I'm in the mood for a game",
+            "Show me a game",
+            "Can you suggest a fun game?"
+        ],
+        "responses": ["Ok sounds good!"]
       }
   ]
 }

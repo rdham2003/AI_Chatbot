@@ -1,9 +1,9 @@
 import random
 import json
 import torch
-from NeuralNetwork import Model
+from modelTraining.NeuralNetwork import Model
 import re
-from nplPipeline import bag_of_words, tokenize
+from modelTraining.nplPipeline import bag_of_words, tokenize
 import requests
 
 def get_def(word):
