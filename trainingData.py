@@ -5,6 +5,9 @@ import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
 from NeuralNetwork import Model
+import os
+
+os.system('cls')
 
 #Loading Data
 with open("intents.json", 'r') as tData:
@@ -56,11 +59,11 @@ class ChatDataset(Dataset):
 
 # Hyperparameters
 batch_size = 8
-hidden_size = 8
+hidden_size = 40
 input_size = len(all_words)
 output_size = len(tags)
 learning_rate = 0.001
-num_epochs = 1000
+num_epochs = 500
 
 print(input_size, output_size)
 

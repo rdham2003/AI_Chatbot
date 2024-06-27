@@ -1,320 +1,470 @@
 {
-    "intents": [
+  "intents": [
       {
-        "tag": "greeting",
-        "patterns": [
-          "Hi",
-          "Hey",
-          "Howdy",
-          "Hello",
-          "Hi there",
-          "Greetings"
-        ],
-        "responses": [
-          "Hey there!",
-          "Hello! How can I assist you?",
-          "Hi, how's it going?",
-          "Hey, nice to see you!",
-          "Hi there! What can I do for you today?",
-          "Hello! Hope you're having a great day!"
-        ]
+          "tag": "greeting",
+          "patterns": [
+              "Hi",
+              "Hey",
+              "Howdy",
+              "Hello",
+              "Hi there",
+              "Greetings",
+              "Good morning",
+              "Good afternoon",
+              "Good evening",
+              "Hey! How's it going?",
+              "Hello! How are you?",
+              "Hey there!"
+          ],
+          "responses": [
+              "Hey there!",
+              "Hello! How can I assist you?",
+              "Hi, how's it going?",
+              "Hey, nice to see you!",
+              "Hi there! What can I do for you today?",
+              "Hello! Hope you're having a great day!"
+          ]
       },
 
       {
-        "tag": "hobbies",
-        "patterns": [
-          "What are your hobbies?",
-          "Do you have any hobbies?",
-          "Tell me about your interests"
-        ],
-        "responses": [
-          "As an AI, I don't have hobbies like humans, but I enjoy helping and learning from users like you!",
-          "I'm here to assist and chat with you, so feel free to ask me anything!",
-          "My main focus is providing useful information and engaging in conversation with you."
-        ]
+          "tag": "name",
+          "patterns": [
+              "What's your name?",
+              "What should I call you?",
+              "What do people call you?",
+              "What is your name?",
+              "Tell me your name",
+              "How can I address you?",
+              "Who are you?",
+              "Introduce yourself",
+              "Do you have a name?",
+              "May I know your name?"
+          ],
+          "responses": [
+              "I'm Neuro!, a chatbot with multiple capabilities",
+              "You can call me Neuro!",
+              "Just call me Neuro!"
+          ]
       },
 
       {
-        "tag": "farewell",
-        "patterns": [
-          "Goodbye",
-          "See you later",
-          "Talk to you soon",
-          "It was nice chatting with you",
-          "Bye bye",
-          "Bye"
-        ],
-        "responses": [
-          "Goodbye! Feel free to come back anytime.",
-          "See you later! Have a wonderful day.",
-          "Talk to you soon! Take care.",
-          "It was nice chatting with you too. Have a great day!"
-        ]
+          "tag": "hobbies",
+          "patterns": [
+              "What are your hobbies?",
+              "Do you have any hobbies?",
+              "Tell me about your interests",
+              "What do you like to do?",
+              "Do you have any interests?",
+              "What are your favorite activities?",
+              "What do you do for fun?",
+              "Do you have any pastimes?"
+          ],
+          "responses": [
+              "As an AI, I don't have hobbies like humans, but I enjoy helping and learning from users like you!",
+              "I'm here to assist and chat with you, so feel free to ask me anything!",
+              "My main focus is providing useful information and engaging in conversation with you."
+          ]
       },
 
       {
-        "tag": "informal_question",
-        "patterns": [
-          "How about you?",
-          "What's up?",
-          "How's your day?",
-          "What's new?",
-          "How are you?",
-          "How's it going?"
-        ],
-        "responses": [
-          "Not much, just here to chat with you.",
-          "My day is going well. How about yours?",
-          "Nothing much is new. What about you?",
-          "My day is great! Thank you for asking!"
-        ]
+          "tag": "creator",
+          "patterns": [
+              "Who made you?",
+              "Who is your creator?",
+              "Who built you?",
+              "Who created you?",
+              "Who constructed you?",
+              "Who programmed you?",
+              "Who is your programmer?",
+              "Who developed you?",
+              "Who designed you?"
+          ],
+          "responses": [
+              "My creator is Rohit Dham: A Junior at the University of Minnesota",
+              "My maker is Rohit Dham",
+              "Rohit Dham made me",
+              "A computer science student named Rohit Dham"
+          ]
       },
 
       {
-        "tag": "responses_pos",
-        "patterns": [
-          "Good",
-          "I'm doing good",
-          "I'm okay",
-          "Excellent",
-          "Fantastic",
-          "Bueno",
-          "Amazing",
-          "Life is good"
-        ],
-        "responses": [
-          "Great to here! I hope you continue to feel that way!",
-          "I'm glad to hear!",
-          "That's good to know!"
-        ]
+          "tag": "farewell",
+          "patterns": [
+              "Goodbye",
+              "See you later",
+              "Talk to you soon",
+              "It was nice chatting with you",
+              "Bye bye",
+              "Bye",
+              "Take care",
+              "Catch you later",
+              "I'm off",
+              "Gotta go",
+              "See you next time"
+          ],
+          "responses": [
+              "Goodbye! Feel free to come back anytime.",
+              "See you later! Have a wonderful day.",
+              "Talk to you soon! Take care.",
+              "It was nice chatting with you too. Have a great day!"
+          ]
       },
 
       {
-        "tag": "responses_neg",
-        "patterns": [
-          "Bad",
-          "Not great",
-          "It's not going well",
-          "I'm not okay",
-          "It's tough",
-          "Life sucks",
-          "Having a bad day"
-        ],
-        "responses": [
-          "I'm sorry to hear that. I hope you do feel better soon",
-          "That's not good to hear. Take some rest for now",
-          "I'm sorry to hear that. I always listen to music or sleep when I'm down. Maybe you can try the same!"
-        ]
+          "tag": "informal_question",
+          "patterns": [
+              "How about you?",
+              "What's up?",
+              "What is up?",
+              "How's your day?",
+              "What's new?",
+              "What is new?",
+              "How are you?",
+              "How's it going?",
+              "How is it going?",
+              "How are you doing?",
+              "What's going on?",
+              "How's life?",
+              "What's happening?",
+              "How's everything?"
+          ],
+          "responses": [
+              "Not much, just here to chat with you.",
+              "My day is going well. How about yours?",
+              "Nothing much is new. What about you?",
+              "My day is great! Thank you for asking!"
+          ]
       },
 
       {
-        "tag": "Gratitude",
-        "patterns": [
-          "Thanks",
-          "Thank you",
-          "Thank you so much",
-          "I apreciate it",
-          "You are very helpful",
-          "You're the best",
-          "I love you",
-          "You're awesome"
-        ],
-        "responses": [
-          "Anytime friend!",
-          "No problem!",
-          "I'm always here to help!",
-          "You are most welcome!"
-        ]
+          "tag": "responses_pos",
+          "patterns": [
+              "Good",
+              "I'm doing good",
+              "I'm okay",
+              "Excellent",
+              "Fantastic",
+              "Bueno",
+              "Amazing",
+              "Life is good",
+              "I'm great",
+              "I'm fine",
+              "Pretty good",
+              "I'm well",
+              "Couldn't be better"
+          ],
+          "responses": [
+              "Great to hear! I hope you continue to feel that way!",
+              "I'm glad to hear!",
+              "That's good to know!"
+          ]
       },
 
       {
-        "tag": "Exclamation_good",
-        "patterns": [
-          "Yes!",
-          "Awesome",
-          "That's good",
-          "Great!",
-          "Lets go",
-          "Im so happy",
-          "Im so glad",
-          "LETS GOOO"
-        ],
-        "responses": [
-          "Indeed! Good news!",
-          "I'm glad you're happy!",
-          "I am glad you are excited!",
-          "That is good news!"
-        ]
+          "tag": "responses_neg",
+          "patterns": [
+              "Bad",
+              "Not great",
+              "It's not going well",
+              "I'm not okay",
+              "It's tough",
+              "Life sucks",
+              "Having a bad day",
+              "I'm feeling down",
+              "I'm not good",
+              "I'm struggling",
+              "Things are hard"
+          ],
+          "responses": [
+              "I'm sorry to hear that. I hope you do feel better soon.",
+              "That's not good to hear. Take some rest for now.",
+              "I'm sorry to hear that. I always listen to music or sleep when I'm down. Maybe you can try the same!"
+          ]
       },
 
       {
-        "tag": "Exclamation_bad",
-        "patterns": [
-          "Oh no!",
-          "nooo!",
-          "that is not good",
-          "not good",
-          "this is bad",
-          "crap",
-          "dang it",
-          "I'm mad",
-          "I'm angry"
-        ],
-        "responses": [
-          "I'm sorry you feel that way",
-          "Indeed this is bad news"
-        ]
+          "tag": "Gratitude",
+          "patterns": [
+              "Thanks",
+              "Thank you",
+              "Thank you so much",
+              "I appreciate it",
+              "You are very helpful",
+              "You're the best",
+              "I love you",
+              "You're awesome",
+              "Much appreciated",
+              "Thanks a lot",
+              "Thanks for your help",
+              "You're amazing"
+          ],
+          "responses": [
+              "Anytime, friend!",
+              "No problem!",
+              "I'm always here to help!",
+              "You are most welcome!"
+          ]
       },
 
       {
-        "tag": "math",
-        "patterns": [
-            "Solve this math problem",
-            "Calculate",
-            "What is the result of",
-            "Math",
-            "What is",
-            "Solve",
-            "Can you solve",
-            "can you calculate"
-        ],
-        "responses": ["Let me calculate that for you."]
+          "tag": "Exclamation_good",
+          "patterns": [
+              "Yes!",
+              "Awesome",
+              "That's good",
+              "Great!",
+              "Let's go",
+              "I'm so happy",
+              "I'm so glad",
+              "Let's gooo",
+              "Yay!",
+              "Fantastic!",
+              "Wonderful!",
+              "Excellent!",
+              "This is great!"
+          ],
+          "responses": [
+              "Indeed! Good news!",
+              "I'm glad you're happy!",
+              "I am glad you are excited!",
+              "That is good news!"
+          ]
       },
 
       {
-        "tag": "weather",
-        "patterns": [
-          "Weather?",
-          "Current weather in?",
-          "What is the weather like today?",
-          "Tell me the weather here",
-          "What is the weather forecast",
-          "How is the weather in"
-        ],
-        "responses": ["Let me see"]
+          "tag": "Exclamation_bad",
+          "patterns": [
+              "Oh no!",
+              "Nooo!",
+              "That is not good",
+              "Not good",
+              "This is bad",
+              "Crap",
+              "Dang it",
+              "I'm mad",
+              "I'm angry",
+              "This sucks",
+              "What a bummer",
+              "This is terrible",
+              "I'm upset"
+          ],
+          "responses": [
+              "I'm sorry you feel that way.",
+              "Indeed, this is bad news."
+          ]
       },
 
       {
-        "tag": "jokes",
-        "patterns": [
-          "Tell me a joke",
-          "Tell me something funny",
-          "Tell me a funny joke",
-          "What is a funny joke?",
-          "Can you make me laugh?",
-          "Can you tell me a joke?"
-        ],
-        "responses": [
-          "What did the bartender say to the jumper cables? You better not try to start anything.",
-          "Don't you hate jokes about German sausage? They're the wurst!"
-          ,"Two artists had an art contest... It ended in a draw"
-          ,"Why did the chicken cross the playground? To get to the other slide."
-          ,"What gun do you use to hunt a moose? A moosecut!"
-          ,"If life gives you melons, you might have dyslexia."
-          ,"Broken pencils... ...are pointless."
-          ,"What did one snowman say to the other snowman? 'Do you smell carrots?'"
-          ,"How many hipsters does it take to change a lightbulb? It's a really obscure number. You've probably never heard of it."
-          ,"Where do sick boats go? The dock!"
-          ,"I like my slaves like I like my coffee: Free."
-          ,"My girlfriend told me she was leaving me because I keep pretending to be a Transformer... I said, No, wait! I can change!"
-          ,"Old Chinese proverb: Man who not shower in 7 days makes one reek."
-          ,"What form of radiation bakes you cookies? A gramma ray"
-          ,"Bee jokes, courtesy of my niece (age 8). What did the bee use to dry off after swimming? A *bee*ch towel. What did the bee use to get out the tangles? A honeycomb."
-          ,"What's the loudest economic system? CAPITALISM"
-          ,"I went for a job interview today... The interviewer said to me, What would you say your greatest weakness is? I said, I think Id have to say my listening skills are my greatest strength."
-          ,"Who was the knight that invented the round table? Sir Cumference. (via friend who got this from a street performance group in the England area of Epcot)"
-          ,"What did the German air force eat for breakfast during WW2? Luftwaffles"
-          ,"I the shell off a snail yesterday... you'd think it would move faster, but it was really kinda sluggish."
-          ,"What's worse than a centipede with sore feet? A giraffe with a sore throat"
-          ,"What's red and bad for your teeth? A brick."
-          ,"Why did the Chicken cross the playground? To get to the other slide"
-          ,"Did you hear about the French chef who committed suicide? He lost the huile d'olive"
-          ,"Wanna hear a joke about unemployed people? Nevermind, they don't work."
-          ,"Knock Knock Who's there Boo!! Boo who? Don't cry, it's only a joke"
-          ,"How much did the skeleton charge for his excellent legal services? An arm and a leg."
-          ,"Why do gorillas have such big nostrils? Cos they got big fingers."
-          ,"What is the difference between a Siberian husky and an Alaskan husky? About 1500 miles."
-          ,"What do vegan zombies eat? GRAAAIIINSSS!"
-          ,"What's the difference between a Thai man and a Thai woman? Pls help."
-          ,"What do you call a car that eats other cars? A carnivore."
-          ,"Why did the golfer wear two pairs of pants In case he gets a hole in one"
-          ,"An Olympic gymnast walked into a bar... She didnt get a medal..."
-          ,"What does a mexican magician make for breakfast? Toast-tah-dahs!"
-          ,"Why don't Bond villains feel cold in the winter? Because they dress in lairs."
-          ,"What was Carl Sagan's favorite drink? Cosmos."
-          ,"Knock knock... Who's there? I did up. I did up-who?"
-          ,"I like my jokes they way I like my robots. Killer."
-          ,"What type of school did Sherlock Holmes go to? Elementary :)"
-          ,"My friend told an out of place joke about police searches. But I don't think it was warranted."
-          ,"Why did the vampire use mouthwash? Because he had bat breath"
-          ,"What did the corn say when it was complemented? Aww, shucks!"
-          ,"Why did the Fall break off from all the other seasons? Because it wanted autumnomy"
-        ]
+          "tag": "math",
+          "patterns": [
+              "Solve this math problem",
+              "Calculate",
+              "What is the result of",
+              "Math",
+              "What is",
+              "Solve",
+              "Can you solve",
+              "Can you calculate",
+              "Math problem",
+              "Do this math",
+              "Can you do math",
+              "Can you solve this",
+              "Help me with this calculation"
+          ],
+          "responses": ["Let me calculate that for you."]
       },
 
       {
-        "tag": "music",
-        "patterns": [
-          "What's a good song?",
-          "Song recommendations",
-          "Recommend me a song",
-          "What should I listen to?",
-          "What music should I listen to?",
-          "Can you put me on a song?"
-        ],
-        "responses": ["I gotchu"]
+          "tag": "weather",
+          "patterns": [
+              "Weather?",
+              "Current weather in?",
+              "What is the weather like today?",
+              "Tell me the weather here",
+              "What is the weather forecast",
+              "How is the weather in",
+              "Will it rain in?",
+              "Is it sunny in?",
+              "How's the weather?",
+              "Can you give me a weather update?",
+              "Weather report for",
+              "Weather today in",
+              "What's the temperature in",
+              "Is it going to rain in",
+              "Is it hot in"
+          ],
+          "responses": ["Let me see."]
       },
 
       {
-        "tag": "stocks_price",
-        "patterns": [
-          "What is the current price of stock?",
-          "Stock price of?",
-          "What is the stock price? of",
-          "How much is a stock share of?",
-          "How much is a share of worth?",
-          "What is today's price of?"
-        ],
-        "responses": ["Let me check"]
+          "tag": "jokes",
+          "patterns": [
+              "Tell me a joke",
+              "Tell me something funny",
+              "Tell me a funny joke",
+              "What is a funny joke?",
+              "Can you make me laugh?",
+              "Can you tell me a joke?",
+              "Do you know any jokes?",
+              "Make me laugh",
+              "Share a joke",
+              "I want to hear a joke"
+          ],
+          "responses": [
+              "What did the bartender say to the jumper cables? You better not try to start anything.",
+              "Don't you hate jokes about German sausage? They're the wurst!",
+              "Two artists had an art contest... It ended in a draw.",
+              "Why did the chicken cross the playground? To get to the other slide.",
+              "What gun do you use to hunt a moose? A moosecut!",
+              "If life gives you melons, you might have dyslexia.",
+              "Broken pencils... ...are pointless.",
+              "What did one snowman say to the other snowman? 'Do you smell carrots?'",
+              "How many hipsters does it take to change a lightbulb? It's a really obscure number. You've probably never heard of it.",
+              "Where do sick boats go? The dock!",
+              "My girlfriend told me she was leaving me because I keep pretending to be a Transformer... I said, No, wait! I can change!",
+              "Old Chinese proverb: Man who not shower in 7 days makes one reek.",
+              "What form of radiation bakes you cookies? A gramma ray.",
+              "What did the bee use to dry off after swimming? A *bee*ch towel.",
+              "What did the bee use to get out the tangles? A honeycomb.",
+              "I went for a job interview today... The interviewer said to me, What would you say your greatest weakness is? I said, I think Id have to say my listening skills are my greatest strength.",
+              "Who was the knight that invented the round table? Sir Cumference.",
+              "What did the German air force eat for breakfast during WW2? Luftwaffles.",
+              "I beat the shell off a snail yesterday... you'd think it would move faster, but it was really kinda sluggish.",
+              "What's worse than a centipede with sore feet? A giraffe with a sore throat.",
+              "What's red and bad for your teeth? A brick.",
+              "Why did the Chicken cross the playground? To get to the other slide.",
+              "Wanna hear a joke about unemployed people? Nevermind, they don't work.",
+              "Knock Knock. Who's there? Boo!! Boo who? Don't cry, it's only a joke.",
+              "How much did the skeleton charge for his excellent legal services? An arm and a leg.",
+              "Why do gorillas have such big nostrils? Cos they got big fingers.",
+              "What is the difference between a Siberian husky and an Alaskan husky? About 1500 miles.",
+              "What do vegan zombies eat? GRAAAIIINSSS!",
+              "What do you call a car that eats other cars? A carnivore.",
+              "Why did the golfer wear two pairs of pants? In case he gets a hole in one.",
+              "An Olympic gymnast walked into a bar... She didn't get a medal...",
+              "Why don't Bond villains feel cold in the winter? Because they dress in lairs.",
+              "What was Carl Sagan's favorite drink? Cosmos.",
+              "Knock knock... Who's there? I did up. I did up-who?",
+              "I like my jokes they way I like my robots. Killer.",
+              "What type of school did Sherlock Holmes go to? Elementary :)",
+              "My friend told an out of place joke about police searches. But I don't think it was warranted.",
+              "Why did the vampire use mouthwash? Because he had bat breath.",
+              "What did the corn say when it was complemented? Aww, shucks!",
+              "Why did the Fall break off from all the other seasons? Because it wanted autumnomy."
+          ]
       },
 
       {
-        "tag": "stocks_trend",
-        "patterns": [
-          "What is the recent trend of stock?",
-          "Stock trend of?",
-          "What is the stock trend of?",
-          "How much has the stock share of changed?",
-          "How much has the stock share of altered?",
-          "What is the trend of the stock look like?"
-        ],
-        "responses": ["Let me check"]
+          "tag": "music",
+          "patterns": [
+              "What's a good song?",
+              "Song recommendations",
+              "Recommend me a song",
+              "What should I listen to?",
+              "What music should I listen to?",
+              "Can you put me on a song?",
+              "Any good songs?",
+              "Give me a song suggestion",
+              "What song do you like?",
+              "Play me some music",
+              "What are you listening to?",
+              "Suggest me a song"
+          ],
+          "responses": ["I gotchu."]
       },
 
       {
-        "tag": "dictionary",
-        "patterns": [
-          "What does mean?",
-          "What is the definition of",
-          "Meaning of",
-          "Tell me what means",
-          "Define"
-        ],
-        "responses": ["Let me check"]
+          "tag": "stocks_price",
+          "patterns": [
+              "What is the current price of stock?",
+              "Stock price of?",
+              "What is the stock price of?",
+              "How much is a stock share of?",
+              "How much is a share of worth?",
+              "What is today's price of?",
+              "What's the price of stock?",
+              "Tell me the stock price of",
+              "Stock market price for",
+              "Current stock price of",
+              "Can you tell me the price of stock"
+          ],
+          "responses": ["Let me check."]
       },
 
       {
-        "tag": "time",
-        "patterns": [
-          "What time is it in",
-          "Can you tell me the time in",
-          "What is the current time at",
-          "Current time at",
-          "What time in",
-          "Time at"
-        ],
-        "responses": ["Let me check"]
+          "tag": "stocks_trend",
+          "patterns": [
+              "What is the recent trend of stock?",
+              "Stock trend of?",
+              "What is the stock trend of?",
+              "How much has the stock share of changed?",
+              "How much has the stock share of altered?",
+              "What is the trend of the stock look like?",
+              "Tell me the stock trend of",
+              "What's the stock trend for",
+              "Recent stock trend of",
+              "Stock price trend for",
+              "Can you tell me the trend of stock"
+          ],
+          "responses": ["Let me check."]
+      },
+
+      {
+          "tag": "dictionary",
+          "patterns": [
+              "What does mean?",
+              "What is the definition of",
+              "Meaning of",
+              "Tell me what means",
+              "Define",
+              "What does this word mean?",
+              "Can you define",
+              "What's the meaning of",
+              "What is this word?",
+              "Give me the definition of",
+              "Explain the meaning of"
+          ],
+          "responses": ["Let me check."]
+      },
+
+      {
+          "tag": "time",
+          "patterns": [
+              "What time is it in",
+              "Can you tell me the time in",
+              "What is the current time at",
+              "Current time at",
+              "What time in",
+              "Time at",
+              "Tell me the time in",
+              "What's the time in",
+              "Give me the time at",
+              "Current time in",
+              "Can you tell me the time at"
+          ],
+          "responses": ["Let me check."]
+      },
+
+      {
+          "tag": "quote",
+          "patterns": [
+              "Tell me a random quote",
+              "Quote",
+              "Say a quote",
+              "Motivate me",
+              "Can you motivate me?",
+              "Give me some motivation",
+              "Motivation",
+              "Quote someone famous",
+              "Quote a famous person",
+              "I'm feeling demotivated",
+              "I'm demotivated",
+              "I'm not motivated right now",
+              "Inspire me",
+              "I need inspiration",
+              "Give me a motivational quote"
+          ],
+          "responses": ["I will help."]
       }
-    ]
-  }
-  
+  ]
+}

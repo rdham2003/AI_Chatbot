@@ -7,6 +7,9 @@ from nplPipeline import bag_of_words, tokenize
 import requests
 import webbrowser
 import datetime
+import os
+
+os.system('cls')
 
 weatherAPI = '3f465ec287cfeb5fa02a21445f57f65b'
 stockAPI = '477c206ae68c40dda2f70e9d696193ba'
@@ -31,6 +34,19 @@ def get_def(word):
     worddict = response.json()
     return worddict[0]['meanings'][0]['definitions'][0]['definition']
 
+def get_random_quote():
+    with open('quotes.csv', 'r') as f:
+        lines = f.readlines()
+        f.close()
+    newlines = []
+    for line in lines:
+        newline = line.split(';')
+        newlines.append(newline)
+        
+    randQuote = random.randint(0,len(newlines)-1)
+        
+    return f'{newlines[randQuote][1]}- {newlines[randQuote][0][1:-1]}'
+
 def get_response(sentence):
     text = sentence
     sentence = tokenize(sentence)
@@ -44,11 +60,14 @@ def get_response(sentence):
     tag = tags[predicted.item()]
     
     probs = torch.softmax(output, dim=1)
-    # print(probs)
+    # tag_predictions = []
+    # for i, prob in enumerate(probs[0]):
+    #     tag_predictions.append((tags[i], prob.item()))
+    # print(tag_predictions)
     probability = probs[0][predicted.item()]
-    # print(probability.item())
+    print(probability.item())
     
-    if probability.item() > 0.95:
+    if probability.item() > 0.85:
       for intent in intents["intents"]:
         if tag == intent["tag"]:
             response = f'{random.choice(intent["responses"])}'
@@ -120,6 +139,8 @@ def get_response(sentence):
                             return f'The current time in {city} is {(datetime.datetime.utcfromtimestamp(get_weather(city)["dt"]+get_weather(city)["timezone"])).strftime("%I:%M %p")}.'
                     if not cityFound:
                         return "Please provide a city."
+            if tag == 'quote':
+                return get_random_quote()
             if tag == 'farewell':
                 global convo
                 convo = False
