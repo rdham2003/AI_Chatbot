@@ -128,13 +128,55 @@
       },
 
       {
+        "tag": "Exclamation_good",
+        "patterns": [
+          "Yes!",
+          "Awesome",
+          "That's good",
+          "Great!",
+          "Lets go",
+          "Im so happy",
+          "Im so glad",
+          "LETS GOOO"
+        ],
+        "responses": [
+          "Indeed! Good news!",
+          "I'm glad you're happy!",
+          "I am glad you are excited!",
+          "That is good news!"
+        ]
+      },
+
+      {
+        "tag": "Exclamation_bad",
+        "patterns": [
+          "Oh no!",
+          "nooo!",
+          "that is not good",
+          "not good",
+          "this is bad",
+          "crap",
+          "dang it",
+          "I'm mad",
+          "I'm angry"
+        ],
+        "responses": [
+          "I'm sorry you feel that way",
+          "Indeed this is bad news"
+        ]
+      },
+
+      {
         "tag": "math",
         "patterns": [
             "Solve this math problem",
             "Calculate",
             "What is the result of",
             "Math",
-            "What is"
+            "What is",
+            "Solve",
+            "Can you solve",
+            "can you calculate"
         ],
         "responses": ["Let me calculate that for you."]
       },
@@ -146,7 +188,8 @@
           "Current weather in?",
           "What is the weather like today?",
           "Tell me the weather here",
-          "What is the weather forecast"
+          "What is the weather forecast",
+          "How is the weather in"
         ],
         "responses": ["Let me see"]
       },
@@ -244,6 +287,31 @@
           "How much has the stock share of changed?",
           "How much has the stock share of altered?",
           "What is the trend of the stock look like?"
+        ],
+        "responses": ["Let me check"]
+      },
+
+      {
+        "tag": "dictionary",
+        "patterns": [
+          "What does mean?",
+          "What is the definition of",
+          "Meaning of",
+          "Tell me what means",
+          "Define"
+        ],
+        "responses": ["Let me check"]
+      },
+
+      {
+        "tag": "time",
+        "patterns": [
+          "What time is it in",
+          "Can you tell me the time in",
+          "What is the current time at",
+          "Current time at",
+          "What time in",
+          "Time at"
         ],
         "responses": ["Let me check"]
       }

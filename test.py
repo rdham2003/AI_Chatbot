@@ -6,12 +6,21 @@ import re
 from nplPipeline import bag_of_words, tokenize
 import requests
 
-weatherAPI = '3f465ec287cfeb5fa02a21445f57f65b'
-
-def get_weather(city):
-    url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={weatherAPI}'
+def get_def(word):
+    url = f'https://api.dictionaryapi.dev/api/v2/entries/en/{word}'
     response = requests.get(url)
-    return response.json()
+    worddict = response.json()
+    return worddict[0]['meanings'][0]['definitions'][0]['definition']
+
+print(get_def('goodbye'))
+
+
+# weatherAPI = '3f465ec287cfeb5fa02a21445f57f65b'
+
+# def get_weather(city):
+#     url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={weatherAPI}'
+#     response = requests.get(url)
+#     return response.json()
 
 # def get_response(sentence):
 #     text = sentence
@@ -30,11 +39,11 @@ def get_weather(city):
     
 #     return probability.item()
 
-city = 'Houston'
-sentence = "What is the weather in Houston?"
+# city = 'Houston'
+# sentence = "What is the weather in Houston?"
 
-print(get_weather(city))
-print(f'The current temperature in {city} is {round((get_weather(city)["main"]["temp"]-273.15) * (9/5) + 32)}°F with {get_weather(city)["weather"][0]["description"]}.')
+# print(get_weather(city))
+# print(f'The current temperature in {city} is {round((get_weather(city)["main"]["temp"]-273.15) * (9/5) + 32)}°F with {get_weather(city)["weather"][0]["description"]}.')
 
 # data = torch.load("model.pth")
 
